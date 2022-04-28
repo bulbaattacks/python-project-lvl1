@@ -11,12 +11,15 @@ def welcome_user():
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     return name
-    
+
+
 def random_num_in_range(start, end):
     return random.randint(start, end)
 
+
 def random_num():
-    return random.randint(1, 100)
+    return random.randint(1, 6)
+
 
 def ask(question):
     print(question)

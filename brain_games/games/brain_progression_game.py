@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-from brain_games.cli import welcome_user, random_num, ask, get_answer, rounds, succeed_game_over, print_correct_answer, random_num_in_range, print_correct_answer, print_wrong_answer
+from brain_games.cli import (welcome_user, ask, get_answer, rounds, succeed_game_over, 
+random_num_in_range, print_correct_answer, print_wrong_answer)
 
 
 def brain_progression():
-    even_question = 'What number is missing in the progression?'
+    progression_question = 'What number is missing in the progression?'
     counter = 0
     name = welcome_user()
-    ask(even_question)
+    ask(progression_question)
 
     for i in range(rounds):
    
@@ -22,6 +23,7 @@ def brain_progression():
             break
 
     succeed_game_over(name, counter)
+
 
 def print_progression():
     start = random_num_in_range(1, 10)
