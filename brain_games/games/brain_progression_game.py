@@ -12,6 +12,8 @@ def brain_progression():
     for i in range(rounds):
    
         right_answer = print_progression()
+        print()
+
 
         answer = get_answer()
 
@@ -39,4 +41,5 @@ def print_progression():
         else:
             print(i, end=' ')
         index += 1
+
     return right_answer
