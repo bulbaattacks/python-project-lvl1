@@ -21,15 +21,21 @@ def is_even():
         print(f'Question: {num}')
         answer = get_answer()
 
-        if (even(num) and answer == yes_answer or not even(num) and answer == no_answer):
-            counter += 1
-            print_correct_answer()
-        elif even(num) and answer != yes_answer:
-            print_wrong_answer(answer, yes_answer, name)
-            break
-        elif not even(num) and answer != no_answer:
-            print_wrong_answer(answer, no_answer, name)
-            break
+        if even(num):
+            if answer == yes_answer:
+                counter += 1
+                print_correct_answer()
+            else:
+                print_wrong_answer(answer, yes_answer, name)
+                break
+
+        if not even(num):
+            if answer == no_answer:
+                counter += 1
+                print_correct_answer()
+            else:
+                print_wrong_answer(answer, no_answer, name)
+                break
 
     succeed_game_over(name, counter)
 
