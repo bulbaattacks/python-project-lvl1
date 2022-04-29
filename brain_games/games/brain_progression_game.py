@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-from brain_games.cli import (welcome_user, ask, get_answer, rounds, succeed_game_over, 
-random_num_in_range, print_correct_answer, print_wrong_answer)
+from brain_games.cli import (welcome_user, ask, get_answer, rounds,
+                             succeed_game_over, random_num_in_range,
+                             print_correct_answer, print_wrong_answer)
 
 
 def brain_progression():
@@ -8,9 +9,7 @@ def brain_progression():
     counter = 0
     name = welcome_user()
     ask(progression_question)
-
     for i in range(rounds):
-   
         print('Question:', end=' ')
         right_answer = print_progression()
 

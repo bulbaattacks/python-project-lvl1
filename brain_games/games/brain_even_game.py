@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-from brain_games.cli import (welcome_user, random_num, ask, get_answer, rounds, 
-succeed_game_over, print_correct_answer, print_wrong_answer)
+from brain_games.cli import (welcome_user, random_num, ask, get_answer, rounds,
+                             succeed_game_over, print_correct_answer,
+                             print_wrong_answer)
 
 
 def is_even():
