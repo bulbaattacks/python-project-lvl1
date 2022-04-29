@@ -6,10 +6,10 @@ from brain_games.cli import (welcome_user, ask, get_answer, rounds,
 
 def is_prime():
 
-    prime_question = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+    question = 'Answer "yes" if given number is prime. Otherwise answer "no".'
     counter = 0
     name = welcome_user()
-    ask(prime_question)
+    ask(question)
 
     for i in range(rounds):
         num = random_num_in_range(1, 100)
