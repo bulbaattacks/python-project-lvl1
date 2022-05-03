@@ -1,7 +1,8 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "'Brain games' is a web app with 5 consol games based on simple 
+math actions."
 authors = ["Arina Zubova <arina777pototskaya@gmail.com>"]
 packages = [
   { include = "brain_games" },
