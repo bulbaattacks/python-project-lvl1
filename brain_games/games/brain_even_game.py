@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-from brain_games.cli import (welcome_user, random_num, ask, get_answer, rounds,
+from brain_games.cli import (welcome_user, NAME, random_num, ask, get_answer, rounds,
                              succeed_game_over, print_correct_answer,
-                             print_wrong_answer)
+                             print_wrong_answer, name)
 
 
 def is_even():
@@ -11,7 +11,7 @@ def is_even():
     no_answer = 'no'
     counter = 0
 
-    name = welcome_user()
+    welcome_user()
     ask(even_question)
 
     for i in range(rounds):
@@ -26,7 +26,7 @@ def is_even():
                 counter += 1
                 print_correct_answer()
             else:
-                print_wrong_answer(answer, yes_answer, name)
+                print_wrong_answer(answer, yes_answer, NAME)
                 break
 
         if not even(num):
@@ -34,10 +34,10 @@ def is_even():
                 counter += 1
                 print_correct_answer()
             else:
-                print_wrong_answer(answer, no_answer, name)
+                print_wrong_answer(answer, no_answer, NAME)
                 break
 
-    succeed_game_over(name, counter)
+    succeed_game_over(NAME, counter)
 
 
 def even(num):

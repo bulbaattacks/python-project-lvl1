@@ -4,14 +4,12 @@ import random
 
 
 rounds = 3
-
+NAME = prompt.string('May I have your name? ')
 
 def welcome_user():
     print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    return name
-
+    print(f'Hello, {NAME}!')
+    
 
 def random_num_in_range(start, end):
     return random.randint(start, end)
@@ -29,15 +27,15 @@ def get_answer():
     return prompt.string('Your answer: ')
 
 
-def succeed_game_over(name, counter):
+def succeed_game_over(NAME, counter):
     if counter == 3:
-        print(f'Congratulations, {name}!')
+        print(f'Congratulations, {NAME}!')
 
 
 def print_correct_answer():
     print('Correct!')
 
 
-def print_wrong_answer(answer, right_answer, name):
+def print_wrong_answer(answer, right_answer, NAME):
     print(f"{answer} is wrong answer ;(. Correct answer was {right_answer}")
-    print(f"Let's try again, {name}!")
+    print(f"Let's try again, {NAME}!")

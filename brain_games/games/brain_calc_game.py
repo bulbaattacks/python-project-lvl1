@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import random
-from brain_games.cli import (welcome_user, random_num, ask, get_answer, rounds,
+from brain_games.cli import (welcome_user, NAME, random_num, ask, get_answer, rounds,
                              succeed_game_over, print_correct_answer,
                              print_wrong_answer)
 
@@ -10,7 +10,7 @@ def calc_game():
     calc_question = 'What is the result of the expression?'
     counter = 0
 
-    name = welcome_user()
+    welcome_user()
     ask(calc_question)
 
     for i in range(rounds):
@@ -28,10 +28,10 @@ def calc_game():
             counter += 1
             print_correct_answer()
         else:
-            print_wrong_answer(answer, right_answer, name)
+            print_wrong_answer(answer, right_answer, NAME)
             break
 
-    succeed_game_over(name, counter)
+    succeed_game_over(NAME, counter)
 
 
 def random_operator():
