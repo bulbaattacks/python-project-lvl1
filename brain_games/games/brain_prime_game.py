@@ -18,10 +18,10 @@ def is_prime():
         answer = prompt.string('Your answer: ')
         right_answer = 'yes'
 
-        for i in range(2, num):
+        for i in range(1, num):
             if num <= 3:
                 break
-            elif num % i == 0:
+            elif num % i == 0 or i == 1:
                 right_answer = 'no'
                 break
 
