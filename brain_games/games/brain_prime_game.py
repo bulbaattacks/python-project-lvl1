@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-from brain_games.cli import (welcome_user, NAME, ask, get_answer, rounds,
-                             succeed_game_over, print_correct_answer,
-                             print_wrong_answer, random_num_in_range)
+import prompt
+from random import randint
+from brain_games.cli import welcome_user, NAME, ROUNDS
 
 
 def is_prime():
@@ -9,13 +9,13 @@ def is_prime():
     question = 'Answer "yes" if given number is prime. Otherwise answer "no".'
     counter = 0
     welcome_user()
-    ask(question)
+    print(question)
 
-    for i in range(rounds):
-        num = random_num_in_range(1, 100)
+    for i in range(ROUNDS):
+        num = randint(1, 100)
 
         print(f'Question: {num}')
-        answer = get_answer()
+        answer = prompt.string('Your answer: ')
         right_answer = 'yes'
 
         for i in range(2, num):
@@ -26,10 +26,12 @@ def is_prime():
                 break
 
         if answer == right_answer:
-            print_correct_answer()
+            print('Correct!')
             counter += 1
         else:
-            print_wrong_answer(answer, right_answer, NAME)
+            print(f"{answer} is wrong answer ;(. Correct answer was {right_answer}")
+            print(f"Let's try again, {NAME}!")
             break
 
-    succeed_game_over(NAME, counter)
+    if counter == 3:
+        print(f'Congratulations, {NAME}!')

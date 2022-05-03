@@ -1,35 +1,37 @@
 #!/usr/bin/env python3
-from brain_games.cli import (welcome_user, NAME, ask, get_answer, rounds,
-                             succeed_game_over, random_num_in_range,
-                             print_correct_answer, print_wrong_answer)
+import prompt
+from random import randint
+from brain_games.cli import welcome_user, NAME, ROUNDS
 
 
 def brain_progression():
     progression_question = 'What number is missing in the progression?'
     counter = 0
     welcome_user()
-    ask(progression_question)
-    for i in range(rounds):
+    print(progression_question)
+    for i in range(ROUNDS):
         print('Question:', end=' ')
         right_answer = print_progression()
         print(' ')
-        answer = get_answer()
+        answer = prompt.string('Your answer: ')
 
         if int(answer) == right_answer:
-            print_correct_answer()
+            print('Correct!')
             counter += 1
         else:
-            print_wrong_answer(answer, right_answer, NAME)
+            print(f"{answer} is wrong answer ;(. Correct answer was {right_answer}")
+            print(f"Let's try again, {NAME}!")
             break
 
-    succeed_game_over(NAME, counter)
+    if counter == 3:
+        print(f'Congratulations, {NAME}!')
 
 
 def print_progression():
-    start = random_num_in_range(1, 10)
-    step = random_num_in_range(1, 10)
+    start = randint(1, 10)
+    step = randint(1, 10)
     end = start + (10 * step)
-    blur_index = random_num_in_range(0, 9)
+    blur_index = randint(1, 9)
     index = 0
 
     for i in range(start, end, step):

@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-import random
-from brain_games.cli import (welcome_user, NAME, random_num, ask, get_answer, rounds,
-                             succeed_game_over, print_correct_answer,
-                             print_wrong_answer)
+import prompt
+from random import randint, choice
+from brain_games.cli import welcome_user, NAME, ROUNDS
 
 
 def calc_game():
@@ -11,29 +10,31 @@ def calc_game():
     counter = 0
 
     welcome_user()
-    ask(calc_question)
+    print(calc_question)
 
-    for i in range(rounds):
+    for i in range(ROUNDS):
 
-        num1 = random_num()
-        num2 = random_num()
+        num1 = randint(1, 6)
+        num2 = randint(1, 6)
         operator = random_operator()
 
         print(f'Question: {num1} {operator} {num2}')
-        answer = get_answer()
+        answer = prompt.string('Your answer: ')
 
         right_answer = eval(f'{num1} {operator} {num2}')
 
         if int(answer) == right_answer:
             counter += 1
-            print_correct_answer()
+            print('Correct!')
         else:
-            print_wrong_answer(answer, right_answer, NAME)
+            print(f"{answer} is wrong answer ;(. Correct answer was {right_answer}")
+            print(f"Let's try again, {NAME}!")
             break
 
-    succeed_game_over(NAME, counter)
+    if counter == 3:
+        print(f'Congratulations, {NAME}!')
 
 
 def random_operator():
     random_operators = ['-', '+', '*']
-    return random.choice(random_operators)
+    return choice(random_operators)

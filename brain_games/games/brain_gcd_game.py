@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
+import prompt
 from math import gcd
-from brain_games.cli import (welcome_user, NAME, random_num, ask, get_answer, rounds,
-                             succeed_game_over, print_correct_answer,
-                             print_wrong_answer)
+from random import randint
+from brain_games.cli import welcome_user, NAME, ROUNDS
 
 
 def get_gcd():
@@ -10,23 +10,25 @@ def get_gcd():
     gcd_question = 'Find the greatest common divisor of given numbers.'
     counter = 0
     welcome_user()
-    ask(gcd_question)
+    print(gcd_question)
 
-    for i in range(rounds):
+    for i in range(ROUNDS):
 
-        num1 = random_num()
-        num2 = random_num()
+        num1 = randint(1, 6)
+        num2 = randint(1, 6)
 
         print(f'Question: {num1} {num2}')
-        answer = get_answer()
+        answer = prompt.string('Your answer: ')
 
         right_answer = gcd(num1, num2)
 
         if int(answer) == right_answer:
             counter += 1
-            print_correct_answer()
+            print('Correct!')
         else:
-            print_wrong_answer(answer, right_answer, NAME)
+            print(f"{answer} is wrong answer ;(. Correct answer was {right_answer}")
+            print(f"Let's try again, {NAME}!")
             break
 
-    succeed_game_over(NAME, counter)
+    if counter == 3:
+        print(f'Congratulations, {NAME}!')
