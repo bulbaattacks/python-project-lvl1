@@ -3,7 +3,6 @@ from random import randint
 
 
 RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-right_answer = 'yes'
 
 def task_and_right_answer():
     num = randint(1, 100)
@@ -22,6 +21,8 @@ def is_prime(num):
         for i in range(3, num):
             if num % i == 0:
                 return 'no'
-            else:
-                return 'yes'
+            elif num % i != 0:
+                i += 1
+        return 'yes'    
+            
 
