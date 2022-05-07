@@ -1,9 +1,9 @@
 #!/usr/bin/env python
-from brain_games.games.brain_progression_game import brain_progression
-
+from brain_games.games import brain_progression_game
+from brain_games.game_engine import common_part
 
 def main():
-    brain_progression()
+    common_part(brain_progression_game)
 
 
 if __name__ == '__main__':

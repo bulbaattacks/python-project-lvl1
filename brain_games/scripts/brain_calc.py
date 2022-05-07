@@ -1,9 +1,10 @@
 #!/usr/bin/env python
-from brain_games.games.brain_calc_game import calc_game
+from brain_games.games import brain_calc_game
+from brain_games.game_engine import common_part
 
 
 def main():
-    calc_game()
+    common_part(brain_calc_game)
 
 
 if __name__ == '__main__':

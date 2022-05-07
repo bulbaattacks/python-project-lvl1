@@ -1,9 +1,10 @@
 #!/usr/bin/env python
-from brain_games.games.brain_prime_game import is_prime
+from brain_games.games import brain_prime_game
+from brain_games.game_engine import common_part
 
 
 def main():
-    is_prime()
+    common_part(brain_prime_game)
 
 
 if __name__ == '__main__':
