@@ -16,7 +16,7 @@ def task_and_right_answer():
 def is_prime(num):
     if num == 2 or num == 3:
         return 'yes'
-    elif num % 2 == 0 or num < 2:
+    elif num % 2 == 0 or num == 1:
         return 'no'
     else:
         for i in range(3, num):
