@@ -3,6 +3,7 @@ from random import randint, choice
 
 RULE = 'What is the result of the expression?'
 
+
 def task_and_right_answer():
 
     num1 = randint(1, 6)
@@ -14,7 +15,7 @@ def task_and_right_answer():
 
     return (task, right_answer)
 
-    
+
 def random_operator():
     random_operators = ['-', '+', '*']
     return choice(random_operators)

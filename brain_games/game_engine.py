@@ -4,24 +4,24 @@ import prompt
 
 ROUNDS = 3
 
+
 def common_part(game):
-	welcome_user()
-	print(game.RULE)
-	counter = 0
+    welcome_user()
+    print(game.RULE)
+    counter = 0
 
-	for i in range(ROUNDS):
-		task, right_answer = game.task_and_right_answer()
-		print(task)
-		answer = prompt.string('Your answer: ')
+    for i in range(ROUNDS):
+        task, right_answer = game.task_and_right_answer()
+        print(task)
+        answer = prompt.string('Your answer: ')
 
-		if answer == right_answer:
-			counter += 1
-			print('Correct!')
-		else:
-			print(f"{answer} is wrong answer ;(. Correct answer was {right_answer}")
-			print(f"Let's try again, {NAME}!")
-			break
+        if answer == right_answer:
+            counter += 1
+            print('Correct!')
+        else:
+            print(f'{answer} is wrong answer ;(. Correct answer was {right_answer}')
+            print(f"Let's try again, {NAME}!")
+            break
 
-	if counter == ROUNDS:
-		print(f'Congratulations, {NAME}!')
-
+    if counter == ROUNDS:
+        print(f'Congratulations, {NAME}!')

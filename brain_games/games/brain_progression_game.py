@@ -5,10 +5,10 @@ RULE = 'What number is missing in the progression?'
 
 
 def task_and_right_answer():
-    start = randint(1, 10) 
+    start = randint(1, 10)
     step = randint(1, 10)
     end = start + (10 * step)
-    blur_index = randint(1, 9) 
+    blur_index = randint(1, 9)
     index = 0
     task = f'Question: '
 

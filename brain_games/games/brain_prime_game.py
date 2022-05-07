@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 from random import randint
 
-
 RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
 
 def task_and_right_answer():
     num = randint(1, 100)
@@ -23,6 +23,4 @@ def is_prime(num):
                 return 'no'
             elif num % i != 0:
                 i += 1
-        return 'yes'    
-            
-
+        return 'yes'
