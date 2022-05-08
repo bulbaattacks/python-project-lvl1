@@ -1,5 +1,5 @@
 ### Hexlet tests and linter status:
-[![linter-check](https://github.com/bulbaattacks/python-project-lvl1/actions/workflows/linter-check.yml/badge.svg)]
+![linter-check](https://github.com/bulbaattacks/python-project-lvl1/actions/workflows/linter-check.yml/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/6b857401bf5121d6e5f0/maintainability)](https://codeclimate.com/github/bulbaattacks/python-project-lvl1/maintainability)
 [![asciicast](https://asciinema.org/a/Pdzd595m6QDaWW2XXHyD6Yike.svg)](https://asciinema.org/a/Pdzd595m6QDaWW2XXHyD6Yike)
 [![asciicast](https://asciinema.org/a/eDEGuR5uUSjY7hISnYGJULasy.svg)](https://asciinema.org/a/eDEGuR5uUSjY7hISnYGJULasy)
