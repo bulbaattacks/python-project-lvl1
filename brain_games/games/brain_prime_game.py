@@ -13,14 +13,7 @@ def task_and_right_answer():
 
 
 def is_prime(num):
-    if num == 2 or num == 3:
-        return 'yes'
-    elif num % 2 == 0 or num == 1:
-        return 'no'
-    else:
-        for i in range(3, num):
-            if num % i == 0:
-                return 'no'
-            elif num % i != 0:
-                i += 1
-        return 'yes'
+    for i in range(2, num // 2 + 1):
+        if num % i == 0:
+            return 'no'
+    return 'yes'
