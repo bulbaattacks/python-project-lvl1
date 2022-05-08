@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from random import randint
 
 RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
@@ -9,7 +8,6 @@ def task_and_right_answer():
     num = randint(1, 6)
     right_answer = is_even(num)
     task = f'Question: {num}'
-
     return (task, right_answer)
 
 

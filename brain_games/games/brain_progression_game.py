@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from random import randint
 
 RULE = 'What number is missing in the progression?'
@@ -19,5 +18,4 @@ def task_and_right_answer():
         else:
             task += f'{i} '
         index += 1
-
     return task, right_answer
