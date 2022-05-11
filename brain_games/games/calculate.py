@@ -7,12 +7,8 @@ def task_and_right_answer():
 
     num1 = randint(1, 6)
     num2 = randint(1, 6)
-    operator = random_operator()
+    random_operators = ['-', '+', '*']
+    operator = choice(random_operators)
     task = f'{num1} {operator} {num2}'
     right_answer = str(eval(f'{num1} {operator} {num2}'))
     return (task, right_answer)
-
-
-def random_operator():
-    random_operators = ['-', '+', '*']
-    return choice(random_operators)
