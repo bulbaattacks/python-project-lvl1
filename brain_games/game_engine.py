@@ -19,7 +19,8 @@ def common_part(game):
             counter += 1
             print('Correct!')
         else:
-            print(f'{answer} is wrong answer ;(. Correct answer was {right_answer}')
+            print(f'{answer} is wrong answer ;(.', end=' ')
+            print(f'Correct answer was {right_answer}')
             print(f"Let's try again, {NAME}!")
             break
 

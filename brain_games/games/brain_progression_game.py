@@ -9,12 +9,12 @@ def task_and_right_answer():
     end = start + (10 * step)
     blur_index = randint(1, 9)
     index = 0
-    task = f'Question: '
+    task = ' '
 
     for i in range(start, end, step):
         if index == blur_index:
             right_answer = str(i)
-            task += f".. "
+            task += ".. "
         else:
             task += f'{i} '
         index += 1
