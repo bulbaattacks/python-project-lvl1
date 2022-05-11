@@ -1,3 +1,7 @@
+### Hexlet tests and linter status:
+![linter-check](https://github.com/bulbaattacks/python-project-lvl1/actions/workflows/linter-check.yml/badge.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/6b857401bf5121d6e5f0/maintainability)](https://codeclimate.com/github/bulbaattacks/python-project-lvl1/maintainability)
+
 ## About
 This is a five consol games based on simple math operations.
 
@@ -11,10 +15,5 @@ You can run brain-gcd game with 'brain-gcd'. You must find the greatest common d
 [![asciicast](https://asciinema.org/a/SFtudqVLVqVNVhdmHOilf8aSD.svg)](https://asciinema.org/a/SFtudqVLVqVNVhdmHOilf8aSD)
 You can run brain-progression game with 'brain-progression'. You must calculate what number is missing in the progression
 [![asciicast](https://asciinema.org/a/MdGuLGzyWODiP6XIe6HWwtKxp.svg)](https://asciinema.org/a/MdGuLGzyWODiP6XIe6HWwtKxp)
-You can run prime-progression game with 'prime-progression'. Type "yes" if the number is prime, otherwise type "no".
+You can run brain-prime game with 'brain-prime'. Type "yes" if the number is prime, otherwise type "no".
 [![asciicast](https://asciinema.org/a/dUnwnAdCHQqflkJraf0REqYgX.svg)](https://asciinema.org/a/dUnwnAdCHQqflkJraf0REqYgX)
-
-### Hexlet tests and linter status:
-![linter-check](https://github.com/bulbaattacks/python-project-lvl1/actions/workflows/linter-check.yml/badge.svg)
-[![Maintainability](https://api.codeclimate.com/v1/badges/6b857401bf5121d6e5f0/maintainability)](https://codeclimate.com/github/bulbaattacks/python-project-lvl1/maintainability)
-
