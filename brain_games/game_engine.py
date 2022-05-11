@@ -12,7 +12,7 @@ def common_part(game):
 
     for i in range(ROUNDS):
         task, right_answer = game.task_and_right_answer()
-        print(f'Question:{task}')
+        print(f'Question: {task}')
         answer = prompt.string('Your answer: ')
 
         if answer == right_answer:

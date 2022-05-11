@@ -7,7 +7,7 @@ def task_and_right_answer():
 
     num = randint(1, 6)
     right_answer = is_even(num)
-    task = f'Question: {num}'
+    task = num
     return (task, right_answer)
 
 

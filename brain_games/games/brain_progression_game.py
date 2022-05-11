@@ -18,4 +18,4 @@ def task_and_right_answer():
         else:
             task += f'{i} '
         index += 1
-    return task, right_answer
+    return task.strip(), right_answer
