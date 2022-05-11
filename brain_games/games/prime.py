@@ -13,4 +13,4 @@ def task_and_right_answer():
 
 def is_prime(num):
     for i in range(2, int(sqrt(num)) + 1):
-        return 'no' if num % i == 0 else 'yes'
+        return 'no' if (int(sqrt(num)) + 1) % i == 0 else 'yes'
