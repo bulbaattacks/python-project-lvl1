@@ -24,5 +24,5 @@ def common_part(game):
             print(f"Let's try again, {NAME}!")
             break
 
-    if counter == ROUNDS:
+    else:
         print(f'Congratulations, {NAME}!')
