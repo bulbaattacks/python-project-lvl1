@@ -4,18 +4,17 @@ RULE = 'What number is missing in the progression?'
 
 
 def task_and_right_answer():
+    mass_num = []
+    num = randint(5, 10)
     start = randint(1, 10)
     step = randint(1, 10)
-    end = start + (10 * step)
-    blur_index = randint(1, 9)
-    index = 0
-    task = ' '
+    end = start + (step * num)
+    mass_num = list(range(start, end, step))
+    mass_num = [str(i) for i in mass_num]
 
-    for i in range(start, end, step):
-        if index == blur_index:
-            right_answer = str(i)
-            task += ".. "
-        else:
-            task += f'{i} '
-        index += 1
-    return task.strip(), right_answer
+    blur_index = randint(0, len(mass_num) - 1)
+    blur_num = '..'
+    right_answer = mass_num[blur_index]
+    mass_num[blur_index] = blur_num
+    task = ' '.join(mass_num)
+    return task, right_answer
