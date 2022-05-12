@@ -10,5 +10,12 @@ def task_and_right_answer():
     random_operators = ['-', '+', '*']
     operator = choice(random_operators)
     task = f'{num1} {operator} {num2}'
-    right_answer = str(eval(f'{num1} {operator} {num2}'))
+    
+    if operator == '-':
+        right_answer = str(num1 - num2)
+    elif operator == '+':
+        right_answer = str(num1 + num2)
+    else:
+        right_answer = str(num1 * num2)
+
     return (task, right_answer)
