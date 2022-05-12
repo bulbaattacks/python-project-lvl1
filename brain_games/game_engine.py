@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-from brain_games.cli import welcome_user, NAME
 import prompt
 
 ROUNDS = 3
 
 
 def common_part(game):
-    welcome_user()
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
     print(game.RULE)
     counter = 0
 
@@ -21,8 +22,8 @@ def common_part(game):
         else:
             print(f'{answer} is wrong answer ;(.', end=' ')
             print(f'Correct answer was {right_answer}')
-            print(f"Let's try again, {NAME}!")
+            print(f"Let's try again, {name}!")
             break
 
     else:
-        print(f'Congratulations, {NAME}!')
+        print(f'Congratulations, {name}!')
