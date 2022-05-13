@@ -5,9 +5,8 @@ RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def get_task_and_right_answer():
-    num = randint(2, 100)
-    right_answer = is_prime(num)
-    task = num
+    task = randint(2, 100)
+    right_answer = is_prime(task)
     return (task, right_answer)
 
 
