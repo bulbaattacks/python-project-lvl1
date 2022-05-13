@@ -4,7 +4,7 @@ import prompt
 ROUNDS = 3
 
 
-def common_part(game):
+def run(game):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
@@ -12,7 +12,7 @@ def common_part(game):
     counter = 0
 
     for i in range(ROUNDS):
-        task, right_answer = game.task_and_right_answer()
+        task, right_answer = game.get_task_and_right_answer()
         print(f'Question: {task}')
         answer = prompt.string('Your answer: ')
 

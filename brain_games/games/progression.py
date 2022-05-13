@@ -3,7 +3,7 @@ from random import randint
 RULE = 'What number is missing in the progression?'
 
 
-def task_and_right_answer():
+def get_task_and_right_answer():
     mass_num = []
     num = randint(5, 10)
     start = randint(1, 10)

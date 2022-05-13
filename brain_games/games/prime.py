@@ -4,10 +4,10 @@ from math import sqrt
 RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def task_and_right_answer():
+def get_task_and_right_answer():
     num = randint(2, 100)
     right_answer = is_prime(num)
-    task = f'Question: {num}'
+    task = num
     return (task, right_answer)
 
 
