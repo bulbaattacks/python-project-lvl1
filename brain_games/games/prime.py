@@ -5,13 +5,15 @@ RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def get_task_and_right_answer():
-    task = randint(2, 100)
-    right_answer = is_prime(task)
-    return (task, right_answer)
+    task = randint(1, 10)
+    right_answer = 'yes' if is_prime(task) else 'no'
+    return task, right_answer
 
 
 def is_prime(num):
+    if num < 2:
+        return False
     for i in range(2, int(sqrt(num) + 1)):
         if num % i == 0:
-            return 'no'
-    return 'yes'
+            return False
+    return True
