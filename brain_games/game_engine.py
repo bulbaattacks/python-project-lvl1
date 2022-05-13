@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import prompt
 
-ROUNDS = 3
+ROUND = 3
 
 
 def run(game):
