@@ -4,16 +4,15 @@ RULE = 'What number is missing in the progression?'
 
 
 def get_task_and_right_answer():
-    mass_num = []
+    generate_progression = []
     num = randint(5, 10)
     start = randint(1, 10)
     step = randint(1, 10)
     end = start + (step * num)
-    mass_num = list(range(start, end, step))
-    mass_num = [str(i) for i in mass_num]
+    generate_progression = list(range(start, end, step))
+    progression = [str(i) for i in generate_progression]
 
-    blur_index = randint(0, len(mass_num) - 1)
-    right_answer = mass_num[blur_index]
-    mass_num[blur_index] = '..'
-    task = ' '.join(mass_num)
+    random_index = randint(0, len(progression) - 1)
+    right_answer, progression[random_index] = progression[random_index], '..'
+    task = ' '.join(progression)
     return task, right_answer
