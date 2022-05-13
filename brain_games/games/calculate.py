@@ -14,7 +14,7 @@ def get_task_and_right_answer():
         right_answer = str(num1 - num2)
     elif operator == '+':
         right_answer = str(num1 + num2)
-    else:
+    elif operator == '*':
         right_answer = str(num1 * num2)
 
     return (task, right_answer)
