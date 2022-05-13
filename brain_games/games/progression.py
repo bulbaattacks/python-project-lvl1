@@ -13,8 +13,7 @@ def get_task_and_right_answer():
     mass_num = [str(i) for i in mass_num]
 
     blur_index = randint(0, len(mass_num) - 1)
-    blur_num = '..'
     right_answer = mass_num[blur_index]
-    mass_num[blur_index] = blur_num
+    mass_num[blur_index] = '..'
     task = ' '.join(mass_num)
     return task, right_answer

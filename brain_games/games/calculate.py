@@ -17,4 +17,4 @@ def get_task_and_right_answer():
     elif operator == '*':
         right_answer = str(num1 * num2)
 
-    return (task, right_answer)
+    return task, right_answer
