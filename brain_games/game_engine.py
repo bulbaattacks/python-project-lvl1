@@ -9,15 +9,13 @@ def run(game):
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print(game.RULE)
-    counter = 0
 
-    for i in range(ROUNDS):
+    for i in range(ROUND):
         task, right_answer = game.get_task_and_right_answer()
         print(f'Question: {task}')
         answer = prompt.string('Your answer: ')
 
         if answer == right_answer:
-            counter += 1
             print('Correct!')
         else:
             print(f'{answer} is wrong answer ;(.', end=' ')
