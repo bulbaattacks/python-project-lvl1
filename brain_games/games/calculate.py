@@ -4,7 +4,6 @@ RULE = 'What is the result of the expression?'
 
 
 def get_task_and_right_answer():
-
     num1 = randint(1, 6)
     num2 = randint(1, 6)
     random_operators = ['-', '+', '*']

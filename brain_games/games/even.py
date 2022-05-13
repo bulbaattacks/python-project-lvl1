@@ -4,7 +4,6 @@ RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def get_task_and_right_answer():
-
     task = randint(1, 6)
     right_answer = 'yes' if task % 2 == 0 else 'no'
-    return (task, right_answer)
+    return task, right_answer
