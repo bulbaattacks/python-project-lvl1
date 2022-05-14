@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
 import prompt
 
-ROUND = 3
+ROUNDS_COUNT = 3
 
 
 def run(game):
@@ -10,8 +9,8 @@ def run(game):
     print(f'Hello, {name}!')
     print(game.RULE)
 
-    for i in range(ROUND):
-        task, right_answer = game.get_task_and_right_answer()
+    for i in range(ROUNDS_COUNT):
+        task, right_answer = game.run_round()
         print(f'Question: {task}')
         answer = prompt.string('Your answer: ')
 

@@ -4,7 +4,7 @@ from math import sqrt
 RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def get_task_and_right_answer():
+def run_round():
     task = randint(1, 100)
     right_answer = 'yes' if is_prime(task) else 'no'
     return task, right_answer
