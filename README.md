@@ -3,7 +3,14 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/6b857401bf5121d6e5f0/maintainability)](https://codeclimate.com/github/bulbaattacks/python-project-lvl1/maintainability)
 
 ## About
-This is a five consol games based on simple math operations.
+Утилита «Игры разума» — набор из пяти консольных математических игр. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
+	•	Калькулятор. Арифметические выражения, которые необходимо вычислить
+	•	Прогрессия. Поиск пропущенных чисел в последовательности чисел
+	•	Определение четного числа
+	•	Определение наибольшего общего делителя
+	•	Определение простого числа
+
+"Mind Games" is a set of five console math games. Each game asks questions that need to be answered correctly. After three correct answers, the game is considered to be completed. Wrong answers end the game and offer to play it again.
 
 ## How to run a game
 
